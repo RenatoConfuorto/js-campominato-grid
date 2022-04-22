@@ -1,8 +1,7 @@
 :root{
   --header-height: 100px;
   --footer-height: 50px;
-  --cell-number-row: 10;
-  --cell-size: calc(50vh / var(--cell-number-row));
+  --cell-number-row: none;
 
   --primary-color: #7fffd4;
   --secondary-color: #6495ed;
@@ -13,6 +12,8 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+
 
 
 .app-wrapper{
@@ -69,6 +70,21 @@ main{
   background-color: var(--primary-color);
 }
 
+/* difficulty class */
+main.easy{
+  --cell-number-row: 10;
+  --cell-size: calc(50vh / var(--cell-number-row));
+}
+
+main.medium{
+  --cell-number-row: 9;
+  --cell-size: calc(50vh / var(--cell-number-row));
+}
+
+main.hard{
+  --cell-number-row: 7;
+  --cell-size: calc(50vh / var(--cell-number-row));
+}
 
 main{
   display: flex;
